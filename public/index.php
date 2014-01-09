@@ -18,8 +18,8 @@ $app['swiftmailer.options'] = array(
     'port' => MAIL_PORT,
     'username' => MAIL_USER,
     'password' => MAIL_PASS,
-    'encryption' => null,
-    'auth_mode' => null
+    'encryption' => 'ssl',
+    'auth_mode' => true
 );
 
 
