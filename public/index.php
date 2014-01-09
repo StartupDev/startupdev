@@ -29,13 +29,12 @@ $app->get('/', function () use ($app) {
 });
 
 $app->post('/send', function () use ($app) {
-
 	try{
 		$request = $app['request'];
 
-		$name = $request->get('name');
-		$email = $request->get('email');
-		$message = $request->get('message');
+		$name = $app->escape($request->get('name'));
+		$email = $app->escape($request->get('email'));
+		$message = $app->escape($request->get('message'));
 
 		$body = sprintf("Name: %s\nEmail: %s\nMessage: %s", $name, $email, $message);
 

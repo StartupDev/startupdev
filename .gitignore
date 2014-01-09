@@ -1,3 +1,4 @@
 resources/
 vendor/
 bootstrap.php
+public/assets/img/.DS_Store
